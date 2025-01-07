@@ -7,23 +7,29 @@ import authRouter from './routes/authRoutes.js';
 import userRouter from './routes/userRoutes.js';
 
 const app = express();
-
 const port = process.env.PORT || 4000;
-connectDB()
 
+// Connect to the database
+connectDB();
+
+// Enable CORS for specific origin
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true, // Allows cookies to be sent
+}));
+
+// Middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ credentials: true }));
 
-// Api Endpoints
+// API Endpoints
 app.get('/', (req, res) => {
     res.send('API Working');
-})
+});
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 
-
-
+// Start server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
-})
+});
