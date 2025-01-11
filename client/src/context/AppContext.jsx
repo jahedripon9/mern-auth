@@ -7,7 +7,6 @@ export const AppContent = createContext();
 export const AppContextProvider = (props) => {
 
     axios.defaults.withCredentials = true;
-    axios.create.baseURL = 'https://web-builder-bangladesh-backend.vercel.app/api'
 
     const backendUrl = import.meta.env.VITE_BACKEND_URL
     const [isLoggedin, setIsLoggedin] = useState(false);

@@ -12,9 +12,6 @@ const Navbar = () => {
     const sendVerificationOtp = async () => {
         try {
             axios.defaults.withCredentials = true;
-            axios.create.baseURL= 'https://web-builder-bangladesh-backend.vercel.app/api'
-
-            
 
             const { data } = await axios.post(backendUrl + '/api/auth/send-verify-otp')
 
@@ -33,7 +30,6 @@ const Navbar = () => {
     const logout = async () => {
         try {
             axios.defaults.withCredentials = true
-            axios.create.baseURL = 'https://web-builder-bangladesh-backend.vercel.app/api'
             const { data } = await axios.post(backendUrl + '/api/auth/logout')
             data.success && setIsLoggedin(false)
             data.success && setUserData(false)

@@ -23,7 +23,6 @@ const Login = () => {
             e.preventDefault();
 
             axios.defaults.withCredentials = true;
-            axios.create.baseURL = 'https://web-builder-bangladesh-backend.vercel.app/api'
 
             if (state === 'Sign Up') {
                 const { data } = await axios.post(backendUrl + '/api/auth/register', { name, email, password })
