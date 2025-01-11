@@ -14,7 +14,7 @@ connectDB();
 
 // Enable CORS for specific origin
 app.use(cors({
-    origin: 'https://web-builder-bangladesh-frontend.vercel.app',
+    origin: 'http://localhost:5173',
     credentials: true, // Allows cookies to be sent
 }));
 
