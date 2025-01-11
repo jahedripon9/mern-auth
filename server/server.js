@@ -12,32 +12,24 @@ const port = process.env.PORT || 4000;
 // Connect to the database
 connectDB();
 
-// Enable CORS for a specific origin
+// Enable CORS for specific origin
 app.use(cors({
     origin: 'https://web-builder-bangladesh-frontend.vercel.app',
     credentials: true, // Allows cookies to be sent
-}));
-
-// Handle preflight requests explicitly
-app.options('*', cors({
-    origin: 'https://web-builder-bangladesh-frontend.vercel.app',
-    credentials: true,
 }));
 
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
 
-// Test endpoint
+// API Endpoints
 app.get('/', (req, res) => {
     res.send('API Working');
 });
-
-// API Routes
 app.use('/api/auth', authRouter);
 app.use('/api/user', userRouter);
 
-// Start the server
+// Start server
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
