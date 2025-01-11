@@ -12,6 +12,9 @@ const Navbar = () => {
     const sendVerificationOtp = async () => {
         try {
             axios.defaults.withCredentials = true;
+            axios.create.baseURL= 'https://web-builder-bangladesh-backend.vercel.app/api'
+
+            
 
             const { data } = await axios.post(backendUrl + '/api/auth/send-verify-otp')
 
