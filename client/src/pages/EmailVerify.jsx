@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom"
 const EmailVerify = () => {
 
   axios.defaults.withCredentials = true;
+  axios.create.baseURL = 'https://web-builder-bangladesh-backend.vercel.app/api'
   const { backendUrl, isLoggedin, userData, getUserData } = useContext(AppContent)
   const navigate = useNavigate()
   const inputRefs = React.useRef([])
