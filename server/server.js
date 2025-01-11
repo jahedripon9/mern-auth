@@ -13,20 +13,9 @@ const port = process.env.PORT || 4000;
 connectDB();
 
 // Enable CORS for specific origin
-const allowedOrigins = [
-    'https://mern-auth-frontend.vercel.app',
-    'http://localhost:5173'
-];
-
 app.use(cors({
-    origin: function (origin, callback) {
-        if (allowedOrigins.includes(origin) || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    credentials: true,
+    origin: 'https://mern-auth-fronend.vercel.app',
+    credentials: true, // Allows cookies to be sent
 }));
 
 // Middleware
