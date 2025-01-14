@@ -1,4 +1,4 @@
-# **MERN Authentication System - Frontend**
+# **MERN Authentication System **
 
 A complete authentication system built using the MERN stack, featuring password reset, email verification, and JWT authentication.
 
