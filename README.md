@@ -3,7 +3,7 @@
 A complete authentication system built using the MERN stack, featuring password reset, email verification, and JWT authentication.
 
 ## **Live Server**
-[MERN Authentication System - Frontend](https://mern-auth-fronend.vercel.app/)
+[MERN Authentication System](https://mern-auth-fronend.vercel.app/)
 
 ## **Features**
 - **Password Reset:** Secure password reset functionality with email verification.
