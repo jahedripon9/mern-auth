@@ -9,7 +9,7 @@ const ResetPassword = () => {
 
     const { backendUrl } = useContext(AppContent)
     axios.defaults.withCredentials = true;
-    axios.create.baseURL = 'https://web-builder-bangladesh-backend.vercel.app/api'
+    axios.create.baseURL = 'https://mern-auth-backend-red.vercel.app/api'
 
 
     const navigate = useNavigate()
