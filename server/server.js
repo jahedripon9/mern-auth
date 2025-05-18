@@ -14,7 +14,7 @@ connectDB();
 
 // Enable CORS for specific origin
 app.use(cors({
-    origin: 'https://mern-auth-backend-red.vercel.app',
+    origin: 'https://mern-auth-fronend.vercel.app',
     credentials: true, // Allows cookies to be sent
 }));
 
