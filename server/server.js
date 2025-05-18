@@ -14,7 +14,7 @@ connectDB();
 
 // Enable CORS for specific origin
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://mern-auth-backend-red.vercel.app',
     credentials: true, // Allows cookies to be sent
 }));
 
