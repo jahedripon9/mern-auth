@@ -1,8 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/api/:match*",
-            "destination": "https://mern-auth-backend.vercel.app/api/:match*"
+            "source": "/(.*)",
+            "destination": "/"
         }
     ]
 }
